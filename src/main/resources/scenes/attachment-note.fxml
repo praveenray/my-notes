@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox spacing="15" alignment="CENTER"
+      stylesheets="@stylesheet.css"
+      styleClass="application-window-padding"
+      prefWidth="783.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" VBox.vgrow="NEVER">
+         <Label fx:id="filePath" styleClass="title-text"/>
+      </HBox>
+      <JFXTextField fx:id="noteText" promptText="Note here"  VBox.vgrow="NEVER"/>
+
+      <HBox alignment="CENTER_RIGHT" spacing="5">
+         <JFXButton onAction="#deleteAttachment" text="Delete Note" styleClass="button-warn"/>
+         <JFXButton onAction="#updateNote" text="Update Note" styleClass="button-success"/>
+      </HBox>
+   </children>
+</VBox>

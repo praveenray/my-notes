@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.praveenray.notes.ui.TagsDropdown?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.JFXTextField?>
+<BorderPane fx:id="panel"
+            prefHeight="300"
+            fx:controller="com.praveenray.notes.ui.SearchController"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox alignment="CENTER">
+            <Text fx:id="header" styleClass="title-text" text="Search My Notes"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <JFXTextField fx:id="descriptionBox" promptText="search words/phrase" VBox.vgrow="NEVER"/>
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Label fx:id="tagsLabel" text="Tags"/>
+                <TagsDropdown fx:id="tagsCombo"/>
+            </HBox>
+            <HBox spacing="5" alignment="CENTER_RIGHT">
+                <JFXButton fx:id="exportBtn" onAction="#exportToFile"    text="Export" styleClass="button-normal"/>
+                <JFXButton fx:id="newNoteBtn" onAction="#createNewNote"  text="New Note" styleClass="button-normal"/>
+                <JFXButton fx:id="searchNowButton" onAction="#searchNow" text="Search" styleClass="button-normal"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

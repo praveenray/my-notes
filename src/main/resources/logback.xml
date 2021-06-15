@@ -1,0 +1,27 @@
+<configuration>
+    <property name="LOG_FILE" value="notes.log"/>
+
+    <appender name="rolling-file-appender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <maxFileSize>${LOG_FILE_MAX_SIZE:-20MB}</maxFileSize>
+            <maxHistory>${LOG_FILE_MAX_HISTORY:-10}</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                LOG: %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <root level="WARN">
+        <appender-ref ref="rolling-file-appender" />
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

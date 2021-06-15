@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.CheckComboBox?>
+
+<fx:root type="javafx.scene.layout.Pane" xmlns:fx="http://javafx.com/fxml">
+    <CheckComboBox fx:id="choices" prefHeight="28.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+</fx:root>

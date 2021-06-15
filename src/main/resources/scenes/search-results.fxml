@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<BorderPane fx:id="root"
+            prefHeight="600"
+            xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.praveenray.notes.ui.SearchResults">
+    <top>
+        <HBox alignment="CENTER">
+            <Label fx:id="countLabel" styleClass="title-text"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="5" alignment="CENTER">
+            <JFXTextArea fx:id="descText" editable="false" prefColumnCount="70" visible="true"/>
+            <WebView fx:id="descTextHtml" visible="false" managed="false"/>
+            <HBox alignment="CENTER_RIGHT">
+                <JFXToggleButton fx:id="textHtmlToggle" text="Show as HTML" onAction="#showAsHtml">
+                    <padding>
+                        <Insets top="0" right="0" bottom="0" left="0"/>
+                    </padding>
+
+                </JFXToggleButton>
+            </HBox>
+            <GridPane vgap="5" hgap="5" fx:id="attachmentPane">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="20"/>
+                </columnConstraints>
+                <Label fx:id="noteIDLabel" text="ID" styleClass="title-text" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label fx:id="noteID" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label fx:id="noteTagLabel" text="Tags" styleClass="title-text" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label fx:id="noteTags" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label fx:id="attachmentLabel" text="Attachments" styleClass="title-text" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <JFXListView fx:id="attachmentListView" prefHeight="100" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+            <HBox alignment="CENTER_RIGHT" spacing="5">
+                <JFXButton fx:id="backToSearchBtn" text="Back To Search" onAction="#backToSearch" styleClass="button-normal, button-small"/>
+                <JFXButton fx:id="previousButton" text="Previous" onAction="#onPrevious" styleClass="button-normal, button-small"/>
+                <JFXButton fx:id="nextButton" text="Next" onAction="#onNext" styleClass="button-normal, button-small"/>
+                <JFXButton fx:id="updateButton" text="Update Note" onAction="#onUpdateNote" styleClass="button-normal, button-small"/>
+                <JFXButton fx:id="deleteButton" text="Delete Note" onAction="#onDeleteNote" styleClass="button-warn, button-small"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

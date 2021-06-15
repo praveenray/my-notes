@@ -1,0 +1,1 @@
+start /b build\image\bin\notes --app.data.dir=data

@@ -1,0 +1,86 @@
+* {
+    -fx-primary-color: derive(darkgray, 80%);
+    -fx-secondary-color: derive(darkgray, -50%);
+    -fx-font-size: 10pt;
+}
+
+.application-window-padding {
+    -fx-padding: 15px 10px 5px 10px;
+}
+
+.button-warn {
+    -fx-background-color: LIGHTCORAL;
+    -fx-font-weight: bold;
+    -jfx-button-type: RAISED;
+}
+
+.button-success {
+    -fx-background-color: #D0D5C3;
+    -fx-font-weight: bold;
+}
+
+.button-normal {
+    -fx-background-color:  #8d918e;
+    -jfx-button-type: RAISED;
+    -fx-font-weight: bold;
+    -fx-text-fill: WHITE;
+}
+
+.button-small {
+    -fx-font-size: 9pt;
+}
+
+
+.ikonli-font-icon-queues {
+    -fx-icon-color: chocolate;
+    -fx-icon-size: 21;
+}
+
+.ikonli-font-icon-small {
+    -fx-icon-size: 13;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color:  -fx-focus-color;
+    -fx-text-fill: white;
+}
+
+.table-view-no-hscroll .scroll-bar * {
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+
+.button-transparent {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.uri-column-size {
+    -fx-pref-width:500;
+}
+
+.standalone-menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.standalone-menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.title-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.menu-item:focused {
+    -fx-background-color: #969A9F;
+}
+
+.table-row-cell:selected .table-cell .hyperlink {
+    -fx-text-fill: -fx-text-background-color ;
+}
+
+.list-cell:selected .hyperlink, .list-cell:hover .hyperlink {
+    -fx-text-fill: -fx-text-background-color ;
+}
